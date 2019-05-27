@@ -1,7 +1,11 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
     font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%   
+    
   }
   header {
     width: 100%;
@@ -9,8 +13,11 @@ body {
 }
 main
 {
-    grid-area: main;
     text-align: center;
+    grid-area: main;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 2/4;
 }
 
   .grid-container {
@@ -33,10 +40,10 @@ main
     padding: 4px 5px;
 }
 .flex #logowanie {
-    background: #4d79ff; /*kolor tej ramki do logowania*/
+    background: #4d79ff; 
     padding: 6px 15px;
-    border-radius: 3px; /*zaokrąglenie*/
-    font-weight: bold; /*pogrubienie*/
+    border-radius: 3px; 
+    font-weight: bold; 
     text-align: center;
 }
 a {
@@ -44,7 +51,8 @@ a {
     color: inherit;
 }
 
-.nav_links a:hover {    
+.nav_links a:hover { 
+    text-decoration: underline;   
     color: #757272;
 }
 .google_logo{
@@ -70,46 +78,64 @@ a {
 }
 
 #search {
-    width: 550px;
-    line-height: 50px;
+    display: flex;
+    line-height: 40px;
     padding: 20px 10px;
-    border-radius: 20px;
-    border: 1px solid #DFE1E5;
     text-indent: 30px;
     cursor: pointer;
     font-size: 14px;
+    border: none transparent;
+    padding-right: 10px;
+    padding-left: 10px;
+    flex: 1;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    padding-bottom: 30px;
+
+    
 }
-  #search:hover {
-    box-shadow: 0 0 5px rgba(33,33,33, .2);
-}
+ 
   .form #search{
     padding: 0 8px;
   }
+  .form {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+.flex1 {
+    display: flex;
+    width: 550px;
+    border-radius: 20px;
+    border: 1px solid #DFE1E5;
+    text-align: center;
+    padding: 5px 20px;
+    
+}
+.flex1:hover {
+    box-shadow: 0 0 5px rgba(33,33,33, .2);
+}
   #loupe {
-    position: relative;
-    z-index: 3;
-    right: -20px;
-    top: 3px;
-    width: 0px;
+    display: flex;
     color: #1C6CC7;
+    align-self: center;
 }
 
 #microphone {
-    position: relative;
-    z-index: 1;
-    left: -30px;
-    top: 3px;
-    width: 0px;
+    display: flex;
     color: #1C6CC7;
+    align-self: center;
+    padding-right: 4px;
 }
 
 #keybord {
-    position: relative;
-    z-index: 1;
-    left: -60px;
-    top: 3px;
-    width: 0px;
+    display: flex;
     color: grey;
+    align-self: center;
 }
   .buttons {
     text-align: center;
@@ -194,4 +220,23 @@ footer {
         text-decoration: none;
         font-size: 13px;
         padding-left: 15px;
+    }
+    table {
+        position: relative;
+        /* right: -500px;*/
+        border-radius: 10px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        width: 580px;
+        font-size: 14px;
+        border: 1px solid #DFE1E5;
+        cursor: pointer;
+        margin-right: auto;
+        margin-left: auto;
+        border-top: none;
+    }
+
+    .autocomplete-result {
+        padding-bottom: 3px;
     }

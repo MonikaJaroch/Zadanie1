@@ -26,15 +26,15 @@
             </div>
 
         <div class="form">
-            <form>
+            <div class="flex1">
                     <i id="loupe" class="fas fa-search"></i>
-                    <input type="text" id="search" title="Szukaj" />
+                    <input v-model="inputContent" id="search" title="Szukaj">
                     <i id="microphone" class="fas fa-microphone" title="Wyszukiwanie głosowe"></i>
                     <i id="keybord" class="fas fa-keyboard" title="Narzędzia do wprowadzania tekstu"></i>
-            </form>
+            </div>
                 
         </div> 
-
+        <v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
          <!-- BUTTONS -->
     <div class= "buttons">  
             <input type="submit" value="Szukaj w Google" id="google_search">
@@ -56,4 +56,8 @@
             </span>
     </footer>      
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="animals.js"></script>
+    <script src="main.js"></script>
   </body>
